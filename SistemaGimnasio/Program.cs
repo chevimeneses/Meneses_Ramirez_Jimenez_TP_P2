@@ -23,7 +23,7 @@ Console.WriteLine("\n--- CREACIÓN DE LA RUTINA ---");
 Console.Write("Nombre de la rutina: ");
 string nombreRutina = Console.ReadLine() ?? "";
 
-Console.Write("Duración de la rutina (en minutos): ");
+Console.Write("Duración de la rutina: ");
 int duracionRutina = int.Parse(Console.ReadLine()!);
 
 Rutina rutina = new Rutina(nombreRutina, duracionRutina);
@@ -41,7 +41,7 @@ for (int i = 1; i <= 3; i++)
     Console.Write("Número de series: ");
     int series = int.Parse(Console.ReadLine()!);
 
-    Console.Write("Descanso entre series (en segundos): ");
+    Console.Write("Descanso entre series: ");
     int descanso = int.Parse(Console.ReadLine()!);
 
     Ejercicio ejercicio = new Ejercicio(
@@ -81,9 +81,7 @@ asignador.AsignarUsuarioAEntrenador(usuario, entrenador);
 Console.WriteLine("Usuario asignado al entrenador correctamente.");
 
 // 6. Mostrar resumen para verificación
-Console.WriteLine("\n====================================");
-Console.WriteLine("       RESUMEN DEL REGISTRO");
-Console.WriteLine("====================================");
+Console.WriteLine("RESUMEN DEL REGISTRO");
 
 Console.WriteLine("\n--- DATOS DEL USUARIO ---");
 Console.WriteLine($"Nombre: {usuario.Nombre}");
@@ -119,9 +117,8 @@ foreach (Usuario u in entrenador.ObtenerUsuariosAsignados())
     Console.WriteLine($"- {u.Nombre}");
 }
 
-Console.WriteLine("\n====================================");
-Console.WriteLine("  REGISTRO COMPLETADO CORRECTAMENTE");
-Console.WriteLine("====================================");
+Console.WriteLine("Registro completado");
+
 
 Console.WriteLine("\nPresiona una tecla para salir...");
 Console.ReadKey();
